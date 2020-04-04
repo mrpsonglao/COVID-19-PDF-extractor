@@ -22,12 +22,13 @@ DBM PDF files in the `raw` folder, which should be either:
 ### Outputs:
 CSV files in `output_csv` folder.
 
-> Note: There are already 2 sample outputs currently in the `output_csv` folder, which are the extracted versions of:
+> Note: There are already 2 sample outputs currently in the `output_csv` folder, in particular:
 > - `UPDATED_SARO.csv`: Extracted SARO data extracted as of 4 April 2020 (5,113 unique transaction rows)
 > - `UPDATED_NCA.csv`: Extracted NCA data extracted as of 4 April 2020 (12,305 unique transaction rows)
 
 ## Scope & Limitations
-- The script has data extraction and cleaning protocols specific to SARO and NCA PDF data structures. It cannot extract data for other kinds of PDF files which have a different structuer.
+- The script has data extraction and cleaning protocols specific to SARO and NCA PDF data structures. It cannot extract data for other kinds of PDF files which have a different structure.
+- The input PDF data is assumed to either have the partial text `"SARO"` or `"NCA"` in their filenames, since a partial string match is used to identify the data cleaning process to apply to the PDF. 
 - Assumed unique transaction identifiers:
     - For SARO data: `SARO NUMBER`
     - For NCA data: a combination of `NCA NUMBER`, `NCA TYPE`, and implicit "row index"
@@ -54,6 +55,7 @@ To replicate this on your own machines:
 ## Running the code
 1. Setup the environment as seen above in [**Environment setup**](#environment-setup).
 2. Add your new SARO or NCA PDF files in the `raw` folder.
+    - **IMPORTANT NOTE:** The input PDF data is assumed to either have the partial text `"SARO"` or `"NCA"` in their filenames, since a partial string match is used to identify the data cleaning process to apply to the PDF. Make sure the filename contains one of these key substrings!
     - Feel free to delete existing PDF files in the `raw` folder.
     - Note that the script will convert **all** PDF files in the `raw` folder, so only add valid SARO or NCA PDF files there.
 
