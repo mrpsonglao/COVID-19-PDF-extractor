@@ -16,8 +16,8 @@ DBM PDF files in the `raw` folder, which should be either:
 - or Notice of Cash Allocation (NCA) data
 
 > Note: There are already 2 sample inputs currently in the `raw` folder, in particular:
-> - `UPDATED_SARO.pdf`: Original SARO data as PDF updated as of 3 April 2020 (274 pages): https://www.dbm.gov.ph/index.php/programs-projects/special-allotment-release-order-saro
-> - `UPDATED_NCA.pdf`: Original NCA data as PDF updated as of 3 April 2020 (800 pages): https://www.dbm.gov.ph/index.php/programs-projects/notice-of-cash-allocation-nca-listing
+> - `UPDATED_SARO.pdf`: [Original SARO data as PDF updated as of 3 April 2020 (274 pages)](https://www.dbm.gov.ph/index.php/programs-projects/special-allotment-release-order-saro)
+> - `UPDATED_NCA.pdf`: [Original NCA data as PDF updated as of 3 April 2020 (800 pages)](https://www.dbm.gov.ph/index.php/programs-projects/notice-of-cash-allocation-nca-listing)
 
 ### Outputs:
 CSV files in `output_csv` folder.
