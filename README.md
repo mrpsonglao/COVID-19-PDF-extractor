@@ -8,7 +8,7 @@ License: MIT
 ## Overview
 Rough Python script which uses `tabula-py` to extract data from DBM PDF files and outputs these as CSV.
 
-For more on `tabula-py`, see here: https://tabula-py.readthedocs.io/en/latest/[https://tabula-py.readthedocs.io/en/latest/]
+For more on `tabula-py`, see [here](https://tabula-py.readthedocs.io/en/latest/).
 
 ### Inputs: 
 DBM PDF files in the `raw` folder, which should be either:
@@ -52,7 +52,7 @@ To replicate this on your own machines:
     ```
 
 ## Running the code
-1. Setup the environment as seen above in **Environment setup**[#environment-setup].
+1. Setup the environment as seen above in [**Environment setup**](#environment-setup).
 2. Add your new SARO or NCA PDF files in the `raw` folder.
     - Feel free to delete existing PDF files in the `raw` folder.
     - Note that the script will convert **all** PDF files in the `raw` folder, so only add valid SARO or NCA PDF files there.
