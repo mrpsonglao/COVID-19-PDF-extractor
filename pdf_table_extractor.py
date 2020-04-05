@@ -97,17 +97,18 @@ def clean_nca(df):
     return df_final
 
 def extract_table_data(input_filename, input_folder, output_folder, pages_to_extract="all"):
-    # define unique_id_col = used to "group together" similar entities
     # define column boundaries
+    # TODO: How to have better auto-detection of column dividers (given no lattice or excel grids)?
     if "SARO" in input_filename:
         columns = [127.602, 213.282,300.492,392.292,511.632,609.552,739.602,1027.242]
     elif "NCA" in input_filename:
-        columns = [129.132,176.562,268.362,361.692,474.912,586.602,712.062,797.742, 1028.772,1146.582]
+        columns = [129.132,176.562,268.362,361.692,474.912,586.602,713,797, 1028.772,1146.582]
 
     ### DATA EXTRACTION
     # Read pdf as DataFrame
+    print(f"Extracting: {input_filename}")
+
     df = tabula.read_pdf(input_filename, pages=pages_to_extract, stream=True, guess=False, columns=columns)
-    print(f"Extracted {input_filename}")
     print(f"Detected columns: {df.columns}")
 
     ### DATA CLEANING
@@ -121,7 +122,7 @@ def extract_table_data(input_filename, input_folder, output_folder, pages_to_ext
     # export the data as csv
     output_filename = input_filename.replace(".PDF", ".csv").replace(".pdf", ".csv").replace(input_folder, output_folder)
     df_final.to_csv(output_filename)
-    print(f"Exported the data as: {output_filename}")
+    print(f"Exported PDF data as: {output_filename}")
 
 
 if __name__ == "__main__":
