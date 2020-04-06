@@ -2,3 +2,6 @@
 .vscode
 .gitattributes
 *.code-workspace
+__pycache__
+intermediary_output_json
+raw_dromic
